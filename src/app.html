@@ -1,0 +1,17 @@
+<template>
+  <h1>${message}</h1>
+  <button click.trigger="doStuff()">TEST</button>
+  <vaadin-grid column-reordering-allowed>
+    <vaadin-grid-column path="name" header="Name">
+      <template>
+        <a href="javascript:void(0);"
+        click.trigger="doStuff()"
+        >
+          [[item.name]]
+        </a>
+      </template>
+    </vaadin-grid-column>
+    <vaadin-grid-column path="surname" header="Surname"></vaadin-grid-column>
+    <vaadin-grid-column path="role" header="Role"></vaadin-grid-column>
+  </vaadin-grid>
+</template>
